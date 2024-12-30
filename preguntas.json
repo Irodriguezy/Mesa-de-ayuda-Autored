@@ -1,0 +1,62 @@
+{
+    "categorias": {
+        "inicio": {
+            "pregunta": ["Hola", "Buenos dias", "Buenas tardes", "Buenas noches", "Como estas", "Hola, necesito ayuda"],
+            "respuesta": "¡Hola! ¿En qué te puedo ayudar? Aquí tienes algunas opciones para elegir:",
+            "opciones": [
+                {"texto": "1. Ventas", "siguiente_categoria": "ventas"},
+                {"texto": "2. Post Venta", "siguiente_categoria": "post_venta"},
+                {"texto": "3. Informes Autosafe y Transferencias", "siguiente_categoria": "informes"},
+                {"texto": "4. Diccionario de versiones y precios", "siguiente_categoria": "diccionario"},
+                {"texto": "5. Hablar con un ejecutivo", "siguiente_categoria": "ejecutivo"},
+                {"texto": "6. Preguntas generales", "siguiente_categoria": "generales"}
+            ]
+        },
+        "ventas": {
+            "pregunta": ["1", "Ventas", "Quiero información de ventas"],
+            "respuesta": "¿En qué te puedo ayudar?",
+            "opciones": [
+                {"texto": "1. Necesito conocer o cotizar un nuevo producto", "accion": "Contacta a Ignacio Rodríguez: irodriguez@autored.cl, +56 9 7648 8856."},
+                {"texto": "2. Necesito conocer de cuánto se trata y cuánto cuesta", "accion": "Contacta a Ignacio Rodríguez: irodriguez@autored.cl, +56 9 7648 8856."}
+            ]
+        },
+        "post_venta": {
+            "pregunta": ["2", "Post Venta", "Necesito ayuda con la plataforma"],
+            "respuesta": "¿Qué tipo de ayuda necesitas?",
+            "opciones": [
+                {"texto": "1. Problemas en la plataforma", "accion": "Contacta a Jorge Facusse: jfacusse@autored.cl, +56 9 5906 4314."},
+                {"texto": "2. Problemas en subastas", "accion": "Contacta a Mauro Gandolfo: mgandolfo@autored.cl, +56 9 9397 0099."}
+            ]
+        },
+        "informes": {
+            "pregunta": ["3", "Informes", "Necesito un informe"],
+            "respuesta": "¿Qué tipo de informe necesitas?",
+            "opciones": [
+                {"texto": "1. Certificados", "accion": "Contacta a Andrés Camhi: acamhi@autored.cl, +56 9 7983 9720."},
+                {"texto": "2. Transferencias", "accion": "Contacta a Andrés Camhi: acamhi@autored.cl, +56 9 7983 9720."}
+            ]
+        },
+        "diccionario": {
+            "pregunta": ["4", "Diccionario", "Precios y versiones"],
+            "respuesta": "¿Necesitas información sobre versiones o precios?",
+            "opciones": [
+                {"texto": "1. Versiones", "accion": "Contacta al equipo de Datos: datos@autored.cl o directamente a nuestro CTO Dventura@autored.cl."},
+                {"texto": "2. Precios", "accion": "Contacta a nuestro equipo de datos (datos@autored.cl o a nuestro ejecutivo Post Venta Mauro Gandolfo: mgandolfo@autored.cl, +56 9 9397 0099."}
+            ]
+        },
+        "ejecutivo": {
+            "pregunta": ["5", "Ejecutivo", "Hablar con un ejecutivo"],
+            "respuesta": "Para contactar a un ejecutivo, por favor llama a:",
+            "opciones": [
+                {"texto": "1. Flavia Tramer", "accion": "Contacta a Flavia Tramer: ftramer@autored.cl, +56 9 5639 0951."}
+            ]
+        },
+        "generales": {
+            "pregunta": ["6", "Generales", "Preguntas generales"],
+            "respuesta": "¿Qué tipo de información necesitas?",
+            "opciones": [
+                {"texto": "1. Información general", "accion": "Por favor contacta directamente con contacto@autored.cl."}
+            ]
+        }
+    }
+}
