@@ -7,6 +7,7 @@ app = Flask(__name__)
 # Configuración para la API de WhatsApp
 ACCESS_TOKEN = "TU_ACCESS_TOKEN_DE_META"
 PHONE_NUMBER_ID = "TU_PHONE_NUMBER_ID"
+WHATSAPP_API_URL = f"https://graph.facebook.com/v17.0/{PHONE_NUMBER_ID}/messages"
 
 # Cargar preguntas desde JSON
 with open('preguntas.json', encoding='utf-8') as f:
@@ -50,7 +51,6 @@ def process_message(user_message, current_category):
     return {"response": "Lo siento, no entiendo tu mensaje.", "options": []}
 
 def enviar_respuesta(phone_number, mensaje):
-    url = f"https://graph.facebook.com/v17.0/{PHONE_NUMBER_ID}/messages"
     headers = {
         "Authorization": f"Bearer {ACCESS_TOKEN}",
         "Content-Type": "application/json"
@@ -60,7 +60,7 @@ def enviar_respuesta(phone_number, mensaje):
         "to": phone_number,
         "text": {"body": mensaje}
     }
-    response = requests.post(url, headers=headers, json=payload)
+    response = requests.post(WHATSAPP_API_URL, headers=headers, json=payload)
     return response.status_code, response.text
 
 if __name__ == '__main__':
